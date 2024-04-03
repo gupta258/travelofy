@@ -81,11 +81,11 @@ function DrawerAppBar(props) {
               <MenuIcon />
             </IconButton>
             <Typography
-              variant="h4"
               component="div"
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", sm: "block" },
+                fontSize: { xs: 24, md: 28, lg: 32 },
                 fontWeight: 500,
               }}
             >

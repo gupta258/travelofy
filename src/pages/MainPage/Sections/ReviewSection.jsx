@@ -37,16 +37,20 @@ const content = [
   },
 ];
 
-function ReviewSection(props) {
+const ReviewSection = (props) => {
   const { title } = props;
 
   return (
-    <Box sx={{ mt: 10 }}>
+    <Box sx={{ mt: { xs: 6, sm: 8, md: 10 } }}>
       <Container maxWidth="lg">
         <Typography
           component="div"
-          variant="h4"
-          sx={{ color: "#000", fontWeight: 700, mb: "52px", width: "60%" }}
+          sx={{
+            color: "#000",
+            fontSize: { xs: 20, sm: 24, md: 26, lg: 32 },
+            fontWeight: 700,
+            mb: { xs: "30px", sm: "40px", md: "52px" },
+          }}
         >
           {title}
         </Typography>
@@ -54,7 +58,7 @@ function ReviewSection(props) {
       </Container>
     </Box>
   );
-}
+};
 
 ReviewSection.propTypes = {
   title: PropTypes.string,

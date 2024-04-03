@@ -11,7 +11,13 @@ import Fourteen from "../assets/Fourteen.png";
 const Footer = () => {
   return (
     <Box
-      sx={{ mt: 30, pt: 30, pb: 10, bgcolor: "#6940FF", position: "relative" }}
+      sx={{
+        mt: 30,
+        pt: { xs: 12, sm: 22, md: 30 },
+        pb: { xs: 4, sm: 6, md: 10 },
+        bgcolor: "#6940FF",
+        position: "relative",
+      }}
     >
       <Box
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
@@ -35,9 +41,9 @@ const Footer = () => {
           }}
         >
           <Typography
-            variant="h3"
             sx={{
               color: "#2E3238",
+              fontSize: { xs: 20, sm: 32, md: 48 },
               fontWeight: 600,
               letterSpacing: "-0.32px",
               mb: 1,
@@ -46,7 +52,12 @@ const Footer = () => {
             So What Are You Waiting…
           </Typography>
           <Typography
-            sx={{ fontSize: 16, color: "#2E3238", width: "48%", mb: 3 }}
+            sx={{
+              fontSize: { xs: 10, sm: 14, md: 16 },
+              color: "#2E3238",
+              width: { xs: "90%", sm: "65%", md: "50%" },
+              mb: { xs: 1, sm: 2, md: 3 },
+            }}
           >
             Our Priority is Attending to the Demands of Your Clientele,
             developing the, we propel our clients quickly.
@@ -58,8 +69,11 @@ const Footer = () => {
               borderRadius: "32px",
               boxShadow:
                 "0px 0.301px 1.505px -0.833px rgba(255, 255, 255, 0.20) inset, 0px 1.144px 5.721px -1.667px rgba(255, 255, 255, 0.20) inset, 0px 5px 25px -2.5px rgba(255, 255, 255, 0.20) inset, 0px -0.482px 0.674px -1px rgba(0, 0, 0, 0.14) inset, 0px -1.831px 2.563px -2px rgba(0, 0, 0, 0.14) inset, 0px -8px 11.2px -3px rgba(0, 0, 0, 0.10) inset",
-              padding: "19.2px 31.626px 20.79px 32px",
-              fontSize: 18,
+              padding: {
+                xs: "10px 20px 10px 20px",
+                md: "20px 30px 20px 30px",
+              },
+              fontSize: { xs: 14, sm: 16, md: 18 },
               fontWeight: 500,
               color: "#FEFFFE",
               letterSpacing: "0.2px",
@@ -81,13 +95,13 @@ const Footer = () => {
                 flex: "1 1 auto",
                 maxWidth: "50%",
               },
-              mb: 5,
+              mb: { xs: 3, sm: 4, md: 5 },
             }}
           >
             <Divider sx={{ borderColor: "#F3F3F3" }} />
             <Typography
-              variant="h4"
               sx={{
+                fontSize: { xs: 24, md: 28, lg: 32 },
                 fontWeight: 500,
                 textAlign: "center",
               }}
@@ -101,7 +115,7 @@ const Footer = () => {
             alignItems="center"
             justifyContent="center"
             gap="35px"
-            mb={5}
+            mb={{ xs: 3, sm: 4, md: 5 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +215,7 @@ const Footer = () => {
           </Stack>
           <Typography
             sx={{
-              fontSize: 14,
+              fontSize: { xs: 12, sm: 14 },
               fontWeight: 700,
               color: "white",
               textAlign: "center",
@@ -212,7 +226,7 @@ const Footer = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: 12,
+              fontSize: { xs: 10, sm: 12 },
               fontWeight: 500,
               color: "white",
               textAlign: "center",

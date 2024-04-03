@@ -146,7 +146,6 @@ const HeroSection = () => {
       <Box
         sx={{
           height: "560px",
-          maxHeight: "560px", // Set the height to fill the viewport
           backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(${heroImage})`, // Set the background image with linear gradient
           backgroundSize: "cover", // Ensure the image covers the entire box
           backgroundPosition: "center", // Center the background image
@@ -165,14 +164,14 @@ const HeroSection = () => {
             gap={4}
           >
             <Typography
-              variant="h4"
               component="div"
               sx={{
                 fontWeight: 700,
-                lineHeight: "46px",
+                lineHeight: { md: "46px" },
                 letterSpacing: "0.822px",
                 textShadow: "0px 0px 54.815px #000;",
-                width: "60%",
+                fontSize: { xs: 20, md: 26, lg: 32 },
+                width: { xs: "90%", sm: "46%", md: "45%" },
               }}
             >
               {`The world's best experiences curated just for you`}
@@ -196,7 +195,7 @@ const HeroSection = () => {
                 borderRadius: "14px",
                 border: "1px solid rgba(105, 64, 255, 0.40)",
                 boxShadow: "0px 0px 54px 0px rgba(0, 0, 0, 0.30)",
-                width: "406px",
+                width: { xs: "100%", sm: "406px" },
                 "& .MuiInput-root::before": {
                   display: "none",
                 },
@@ -219,15 +218,22 @@ const HeroSection = () => {
           </Stack>
         </Container>
       </Box>
-      <Box sx={{ backgroundColor: "#000", py: "14px" }}>
+      <Box
+        sx={{
+          backgroundColor: "#000",
+          pt: { xs: "12px", md: "14px" },
+          pb: { md: "14px" },
+        }}
+      >
         <Container
           maxWidth="lg"
           sx={{
             color: "#fff",
             display: "flex",
             flexDirection: "row",
+            flexWrap: "wrap",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: { xs: "space-around", md: "space-evenly" },
           }}
         >
           {bgStrip.map((item, index) => (
@@ -236,6 +242,7 @@ const HeroSection = () => {
               direction="row"
               alignItems="center"
               spacing="4px"
+              mb={{ xs: "12px", md: "0px" }}
             >
               {item.id === 1 && (
                 <Stack
@@ -245,13 +252,20 @@ const HeroSection = () => {
                   sx={{ mr: "4px" }}
                 >
                   <Google sx={{ width: 20, height: 20 }} />
-                  <Typography sx={{ fontSize: 16, fontWeight: 700 }}>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: 12, sm: 14, md: 16 },
+                      fontWeight: 700,
+                    }}
+                  >
                     4.6
                   </Typography>
                 </Stack>
               )}
               {item.svgIcon}
-              <Typography sx={{ fontSize: 16, fontWeight: 700 }}>
+              <Typography
+                sx={{ fontSize: { xs: 12, sm: 14, md: 16 }, fontWeight: 700 }}
+              >
                 {item.tag}
               </Typography>
             </Stack>

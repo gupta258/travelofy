@@ -13,7 +13,11 @@ export default function ProductCard(props) {
 
   return (
     <Card
-      sx={{ maxWidth: 340, backgroundColor: "transparent", boxShadow: "none" }}
+      sx={{
+        width: { xs: "100%", sm: 340 },
+        backgroundColor: "transparent",
+        boxShadow: "none",
+      }}
     >
       <CardMedia sx={{ height: 340 }} title="green iguana" image={item.image} />
       <CardContent
@@ -146,7 +150,7 @@ export default function ProductCard(props) {
           fullWidth
           variant="contained"
         >
-          Learn More
+          Request Callback
         </Button>
       </CardActions>
     </Card>

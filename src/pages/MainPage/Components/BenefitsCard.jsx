@@ -9,7 +9,12 @@ export default function BenefitsCard(props) {
 
   return (
     <Card
-      sx={{ maxWidth: 270, backgroundColor: "transparent", boxShadow: "none" }}
+      sx={{
+        width: { xs: "100%", sm: 270 },
+        mb: { xs: "20px", sm: 0 },
+        backgroundColor: "transparent",
+        boxShadow: "none",
+      }}
     >
       <CardMedia
         sx={{ height: 270, borderRadius: "16px" }}

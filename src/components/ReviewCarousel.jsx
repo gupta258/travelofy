@@ -30,17 +30,25 @@ export default function ReviewCarousel(props) {
       {content.map((item, index) => (
         <div key={index}>
           <Grid container direction="row" mx="auto">
-            <Grid item xs={12} md={7} lg={7} xl={7}>
+            <Grid item xs={12} md={6} lg={7} xl={7} mb={{ xs: 3, md: 0 }}>
               <img src={Thirteen} width="100%" />
             </Grid>
-            <Grid item xs={12} md={5} lg={5} xl={5} pl={8}>
+            <Grid item xs={12} md={6} lg={5} xl={5} pl={{ xs: 0, md: 8 }}>
               <Typography
-                variant="h5"
-                sx={{ color: "#4A4A4A", fontWeight: 600, mb: 3 }}
+                sx={{
+                  color: "#4A4A4A",
+                  fontWeight: 600,
+                  mb: { xs: 3, md: 2, lg: 3 },
+                  fontSize: { xs: 18, sm: 20, lg: 24 },
+                }}
               >
                 {item.title}
               </Typography>
-              <Stack direction="row" spacing="4px" mb="10px">
+              <Stack
+                direction="row"
+                spacing="4px"
+                mb={{ xs: "12px", md: "6px", lg: "10px" }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
@@ -163,11 +171,22 @@ export default function ReviewCarousel(props) {
                 </svg>
               </Stack>
               <Typography
-                sx={{ color: "#4A4A4A", fontSize: 14, fontWeight: 600, mb: 9 }}
+                sx={{
+                  color: "#4A4A4A",
+                  fontSize: { xs: 10, sm: 12, lg: 14 },
+                  fontWeight: 600,
+                  mb: { xs: 5, md: 4, lg: 9 },
+                }}
               >
                 {item.desc}
               </Typography>
-              <Typography sx={{ color: "black", fontSize: 16, opacity: 0.6 }}>
+              <Typography
+                sx={{
+                  color: "black",
+                  fontSize: { xs: 12, md: 14, lg: 16 },
+                  opacity: 0.6,
+                }}
+              >
                 {item.tag}
               </Typography>
             </Grid>

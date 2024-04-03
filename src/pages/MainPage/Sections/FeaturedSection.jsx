@@ -51,14 +51,23 @@ const FeaturedSection = (props) => {
   }, []);
 
   return (
-    <Box sx={{ mt: 10 }}>
-      <Container maxWidth="lg" sx={{ mb: "52px" }}>
-        {title && (
-          <Typography variant="h4" sx={{ color: "#000", fontWeight: 700 }}>
+    <Box sx={{ mt: { xs: 6, sm: 8, md: 10 } }}>
+      {title && (
+        <Container
+          maxWidth="lg"
+          sx={{ mb: { xs: "30px", sm: "40px", md: "52px" } }}
+        >
+          <Typography
+            sx={{
+              color: "#000",
+              fontWeight: 700,
+              fontSize: { xs: 20, sm: 24, md: 26, lg: 32 },
+            }}
+          >
             {title}
           </Typography>
-        )}
-      </Container>
+        </Container>
+      )}
       <Box
         sx={{
           overflowX: "hidden",

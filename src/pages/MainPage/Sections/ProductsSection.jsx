@@ -19,25 +19,30 @@ const ProductsSection = (props) => {
         >
           {title}
         </Typography>
-        <Grid container rowSpacing={7}>
-          {item.map((item, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              lg={4}
-              key={index}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <ProductCard item={item} />
-            </Grid>
-          ))}
-        </Grid>
+        <div style={{ overflowX: "auto" }}>
+          <Grid
+            container
+            rowSpacing={7}
+            sx={{ display: "flex", flexWrap: "nowrap", pb: 2 }}
+          >
+            {item.map((item, index) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                lg={4}
+                key={index}
+                sx={{
+                  flex: "0 0 auto",
+                  minWidth: "300px",
+                  mr: 2,
+                }}
+              >
+                <ProductCard item={item} />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
       </Container>
     </Box>
   );

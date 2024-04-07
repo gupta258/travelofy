@@ -55,28 +55,6 @@ const productsCardData = [
     rating: "4.9",
     reviews: "(326)",
   },
-  {
-    id: 5,
-    image: ProductImage,
-    name: "Glimpse Of Switzerland | FREE FIFA Museum Tickets",
-    price: "USD 1,196",
-    cuttedPrice: "USD 1593",
-    offerTag: "SAVE USD 396",
-    days: "5 days & 4 nights",
-    rating: "4.9",
-    reviews: "(326)",
-  },
-  {
-    id: 6,
-    image: ProductImage,
-    name: "Glimpse Of Switzerland | FREE FIFA Museum Tickets",
-    price: "USD 1,196",
-    cuttedPrice: "USD 1593",
-    offerTag: "SAVE USD 396",
-    days: "5 days & 4 nights",
-    rating: "4.9",
-    reviews: "(326)",
-  },
 ];
 
 const benefitsCardData = [

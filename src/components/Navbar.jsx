@@ -25,7 +25,7 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
-  const { window } = props;
+  const { window, details } = props;
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -63,10 +63,12 @@ function DrawerAppBar(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: "transparent",
+          backgroundColor: details === "details" ? "#fff" : "transparent",
           boxShadow: "none",
           backgroundImage:
-            "linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 80.41%)",
+            details === "details"
+              ? ""
+              : "linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 80.41%)",
         }}
       >
         <Container maxWidth="lg">
@@ -87,6 +89,7 @@ function DrawerAppBar(props) {
                 display: { xs: "none", sm: "block" },
                 fontSize: { xs: 24, md: 28, lg: 32 },
                 fontWeight: 500,
+                color: details === "details" ? "#6940FF" : "",
               }}
             >
               travelofy.
@@ -131,11 +134,8 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
+  details: PropTypes.string,
 };
 
 export default DrawerAppBar;

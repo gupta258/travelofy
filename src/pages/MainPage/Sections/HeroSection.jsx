@@ -9,7 +9,7 @@ import {
 import { Google } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
 import Navbar from "../../../components/Navbar";
-import heroImage from "../../../assets/heroImage.png";
+import HomeSectionVideo from "../../../assets/HomeSectionVideo.mp4";
 
 const bgStrip = [
   {
@@ -146,7 +146,7 @@ const HeroSection = () => {
       <Box
         sx={{
           height: "560px",
-          backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(${heroImage})`, // Set the background image with linear gradient
+          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)`, // Set the background image with linear gradient
           backgroundSize: "cover", // Ensure the image covers the entire box
           backgroundPosition: "center", // Center the background image
           position: "relative", // Set position to relative to allow positioning of Navbar
@@ -155,6 +155,21 @@ const HeroSection = () => {
           justifyContent: "space-between", // Center the Navbar vertically
         }}
       >
+        <video
+          className="videoTag"
+          autoPlay
+          loop
+          muted
+          style={{
+            position: "absolute",
+            height: "560px",
+            width: "100%",
+            objectFit: "cover",
+            zIndex: -1,
+          }}
+        >
+          <source src={HomeSectionVideo} type="video/mp4" />
+        </video>
         <Navbar />
         <Container maxWidth="lg">
           <Stack
@@ -174,7 +189,7 @@ const HeroSection = () => {
                 width: { xs: "90%", sm: "46%", md: "45%" },
               }}
             >
-              {`The world's best experiences curated just for you`}
+              {`Give weekends that holiday feels`}
             </Typography>
             <TextField
               id="input-with-icon-textfield"
